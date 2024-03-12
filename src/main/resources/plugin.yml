@@ -1,3 +1,0 @@
-name: CoreInvitMC
-version: '${project.version}'
-main: p.coreinvitmc.CoreInvitMC
