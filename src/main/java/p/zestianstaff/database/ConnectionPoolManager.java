@@ -2,6 +2,7 @@ package p.zestianstaff.database;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import p.zestianstaff.ZestianStaff;
+import p.zestianstaff.manager.ConfigManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,45 +11,40 @@ import java.sql.SQLException;
 
 public class ConnectionPoolManager {
 
+    private final ZestianStaff plugin;
+
     private HikariDataSource dataSource;
 
-    private String hostname;
-    private String port;
-    private String database;
-    private String username;
-    private String password;
+    private DatabaseCredentials dbCredentials;
 
     private int minimumConnections;
     private int maximumConnections;
     private long connectionTimeout;
     private String testQuery;
 
-    public ConnectionPoolManager() {
+    public ConnectionPoolManager(ZestianStaff plugin) {
+        this.plugin = plugin;
         init();
         setupPool();
     }
 
     private void init() {
-        hostname = "129.159.94.131";
-        port = "3306";
-        database = "s5_staffplusplus";
-        username = "u5_x2aBl7Qu5o";
-        password = "Vyy1@a2NqAk5=i=2=aqb=XgG";
+        dbCredentials = ConfigManager.getDBHostname();
     }
 
     private void setupPool() {
         HikariConfig config = new HikariConfig();
         config.setJdbcUrl(
                 "jdbc:mysql://" +
-                        hostname +
+                        dbCredentials.hostname() +
                         ":" +
-                        port +
+                        dbCredentials.port() +
                         "/" +
-                        database
+                        dbCredentials.database()
         );
-        config.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        config.setUsername(username);
-        config.setPassword(password);
+        config.setDriverClassName("com.mysql.jdbc.Driver");
+        config.setUsername(dbCredentials.username());
+        config.setPassword(dbCredentials.password());
         config.setIdleTimeout(870000000);
         config.setMaxLifetime(870000000);
         config.setConnectionTimeout(870000000);

@@ -3,7 +3,7 @@ package p.zestianstaff.manager;
 import org.spongepowered.configurate.ConfigurateException;
 import org.spongepowered.configurate.ConfigurationNode;
 import p.zestianstaff.database.DatabaseCredentials;
-import p.zestianstaff.LangConfigUtils.ConfigUtils;
+import p.zestianstaff.utils.ConfigUtils;
 
 import java.nio.file.Path;
 

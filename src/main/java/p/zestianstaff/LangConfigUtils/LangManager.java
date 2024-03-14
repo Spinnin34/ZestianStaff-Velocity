@@ -1,4 +1,4 @@
-package p.zestianstaff.manager;
+package p.zestianstaff.LangConfigUtils;
 
 import com.velocitypowered.api.command.CommandSource;
 import com.velocitypowered.api.proxy.Player;
