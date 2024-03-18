@@ -10,6 +10,7 @@ import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import p.zestianstaff.ZestianStaff;
 import p.zestianstaff.manager.LangManager;
 import p.zestianstaff.manager.StaffModeManager;
+import p.zestianstaff.message.MessageUtils;
 
 import java.util.List;
 
@@ -48,7 +49,7 @@ public class StaffListCommand implements SimpleCommand {
             }
         }
 
-        commandSource.sendMessage(Component.text("§b§lSTAFFS:"));
+        commandSource.sendMessage(Component.text(MessageUtils.sendCenteredMessage("§b§lSTAFF LIST")));
         for (String message : messages) {
             commandSource.sendMessage(MiniMessage.miniMessage().deserialize(message));
         }

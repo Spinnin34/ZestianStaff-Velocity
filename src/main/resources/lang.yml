@@ -1,0 +1,40 @@
+#
+#   ██████╗██████╗ ██╗███╗  ██╗███╗  ██╗██╗███╗  ██╗
+#  ██╔════╝██╔══██╗██║████╗ ██║████╗ ██║██║████╗ ██║
+#  ╚█████╗░██████╔╝██║██╔██╗██║██╔██╗██║██║██╔██╗██║
+#   ╚═══██╗██╔═══╝ ██║██║╚████║██║╚████║██║██║╚████║
+#  ██████╔╝██║     ██║██║ ╚███║██║ ╚███║██║██║ ╚███║
+#  ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚══╝╚═╝  ╚══╝╚═╝╚═╝  ╚══╝
+#
+
+prefix: "&c&lSTAFFz »&r "
+only_player: "&cEste comando solo puede ser ejecutado por un jugador."
+no_perms: "&cNo tienes permisos para ejecutar este comando."
+reload_success: "&aRecargado exitosamente"
+reload_help: "&a/vstaff reload"
+
+
+activate_staffmode:
+  - ""
+  - "§cᴢᴇꜱᴛɪᴀɴ ꜱᴛᴀꜰꜰ ᴍᴏᴅᴇ v2"
+  - ""
+  - "§a¡Ya estás en modo staff!"
+  - ""
+  - "§7ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴛʜᴇ ꜱᴘɪɴɴɪɴ"
+2x_activate_staffmode:
+  - ""
+  - "§cᴢᴇꜱᴛɪᴀɴ ꜱᴛᴀꜰꜰ ᴍᴏᴅᴇ v2"
+  - ""
+  - "§aModo staff activado."
+  - ""
+  - "§7ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴛʜᴇ ꜱᴘɪɴɴɪɴ"
+cooldown:
+  - "§f[§cᴢᴇꜱᴛɪᴀɴ ꜱᴛᴀꜰꜰ§f] §7Aún no puedes desactivar el modo staff. Debes esperar al menos 10 minutos."
+fianl_staffmode:
+  - ""
+  - "§cᴢᴇꜱᴛɪᴀɴ ꜱᴛᴀꜰꜰ ᴍᴏᴅᴇ v2"
+  - ""
+  - "§cModo staff desactivado."
+developer:
+  - ""
+  - "§7ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴛʜᴇ ꜱᴘɪɴɴɪɴ"

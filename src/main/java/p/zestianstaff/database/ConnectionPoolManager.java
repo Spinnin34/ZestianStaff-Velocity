@@ -12,15 +12,8 @@ import java.sql.SQLException;
 public class ConnectionPoolManager {
 
     private final ZestianStaff plugin;
-
     private HikariDataSource dataSource;
-
     private DatabaseCredentials dbCredentials;
-
-    private int minimumConnections;
-    private int maximumConnections;
-    private long connectionTimeout;
-    private String testQuery;
 
     public ConnectionPoolManager(ZestianStaff plugin) {
         this.plugin = plugin;
