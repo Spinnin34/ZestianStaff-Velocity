@@ -1,4 +1,5 @@
 package p.zestianstaff.database;
+
 import com.google.inject.Inject;
 import p.zestianstaff.ZestianStaff;
 
@@ -9,10 +10,12 @@ import java.util.List;
 public class SQLManager {
 
     public final ConnectionPoolManager pool;
+    private final ZestianStaff plugin;
 
     @Inject
-    public SQLManager(ConnectionPoolManager pool) {
-        this.pool = pool;
+    public SQLManager(ZestianStaff plugin) {
+        this.plugin = plugin;
+        pool = new ConnectionPoolManager(plugin);
         makeTable();
     }
 
@@ -60,7 +63,6 @@ public class SQLManager {
              PreparedStatement ps = conn.prepareStatement(
                      "SELECT Jugador, SUM(Horas) AS TotalHoras, SUM(Minutos) AS TotalMinutos, SUM(Segundos) AS TotalSegundos " +
                              "FROM `DatosJugador` " +
-                             "WHERE Jugador IN (SELECT DISTINCT Jugador FROM `Permisos` WHERE Permiso = 'staff.top') " +
                              "GROUP BY Jugador " +
                              "ORDER BY TotalHoras DESC, TotalMinutos DESC, TotalSegundos DESC " +
                              "LIMIT ?"
@@ -86,4 +88,5 @@ public class SQLManager {
         }
     }
 }
+
 

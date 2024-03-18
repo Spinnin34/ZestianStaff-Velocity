@@ -72,8 +72,6 @@ public class LangManager {
             }
         } catch (ConfigurateException e) {
         }
-
         return messages;
     }
-
 }

@@ -2,8 +2,10 @@ p\zestianstaff\utils\DiscordWebhookMessage$Embed$Footer.class
 p\zestianstaff\Command\StaffListCommand.class
 p\zestianstaff\database\DatabaseCredentials.class
 velocity-plugin.json
+p\zestianstaff\message\DefaultFontInfo.class
 p\zestianstaff\utils\DiscordWebhookMessage$Embed$Author.class
 p\zestianstaff\Command\StaffVelocity.class
+p\zestianstaff\message\MessageUtils.class
 p\zestianstaff\manager\LangManager.class
 p\zestianstaff\utils\WebhookUtil$1.class
 p\zestianstaff\LangConfigUtils\LangManager.class
@@ -14,6 +16,7 @@ p\zestianstaff\events\PlayerEvents.class
 p\zestianstaff\utils\DiscordWebhookMessage$Embed$Field.class
 p\zestianstaff\database\SQLManager.class
 p\zestianstaff\manager\StaffModeManager.class
+p\zestianstaff\Command\SoporteCommand.class
 p\zestianstaff\utils\WebhookUtil.class
 p\zestianstaff\Command\StaffTopCommand.class
 p\zestianstaff\utils\Date.class
